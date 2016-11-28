@@ -1,0 +1,71 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <title>Credentials</title>
+</head>
+<body style= "background-color: #d0a2d0">
+  <div class="container" ng-controller="AppCtrl">
+  
+    <h1>Christian Soltero</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>         
+          <th>Degree</th>
+          <th>Graduating Year</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in myproject">
+          <td>{{contact.school}}</td>
+          <td>{{contact.degree}}</td>
+          <td>{{contact.last_year}}</td>
+        </tr>
+	  </tbody>
+	  <thead>
+	  <tr>
+          <th>Skill</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+	  <tr ng-repeat="contact in myproject">
+          <td>{{contact.skill}}</td>
+        </tr>
+      </tbody>
+	  <thead>
+	  <tr>
+          <th>Project Name</th>
+		  <th>Project Description</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+	  <tr ng-repeat="contact in myproject">
+          <td>{{contact.title}}</td>
+		  <td>{{contact.description_properties}}</td>
+        </tr>
+      </tbody>
+	  
+    </table>
+
+	
+	<footer>
+  <p>Posted by: Christian Soltero</p>
+  <p>References available upon request.</p>
+</footer>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>
